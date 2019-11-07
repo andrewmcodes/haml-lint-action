@@ -1,11 +1,11 @@
 <div align="center">
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
-  ![StandardRB](https://github.com/andrewmcodes/standardrb-action/workflows/StandardRB/badge.svg)
-  ![Tests](https://github.com/andrewmcodes/standardrb-action/workflows/Test/badge.svg)
-  ![Build](https://github.com/andrewmcodes/standardrb-action/workflows/Build/badge.svg)
-  [![Changelog](https://github.com/andrewmcodes/standardrb-action/workflows/Changelog/badge.svg)](/CHANGELOG.md)
+  ![StandardRB](https://github.com/andrewmcodes/haml-lint-action/workflows/StandardRB/badge.svg)
+  ![Tests](https://github.com/andrewmcodes/haml-lint-action/workflows/Test/badge.svg)
+  ![Build](https://github.com/andrewmcodes/haml-lint-action/workflows/Build/badge.svg)
+  [![Changelog](https://github.com/andrewmcodes/haml-lint-action/workflows/Changelog/badge.svg)](/CHANGELOG.md)
   ![Version Number](https://img.shields.io/static/v1?label=Version&message=v0.0.1&color=blue)
+  [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 </div>
 
 # :white_check_mark: HAML Lint Action
@@ -23,6 +23,7 @@ A GitHub Action to run HAML-Lint against your code and create annotations in the
   - [:rotating_light: Code of Conduct](#rotatinglight-code-of-conduct)
   - [:copyright: License](#copyright-license)
   - [:robot: Check Out My Other Ruby GitHub Actions](#robot-check-out-my-other-ruby-github-actions)
+  - [✨ Contributors](#%e2%9c%a8-contributors)
 
 ## :page_facing_up: Introduction
 
@@ -67,7 +68,8 @@ Due to the GitHub Check Runs API, we can only return 50 annotations per run. See
 
 ## :camera_flash: Screenshots
 
-TODO
+![HAML Lint Checks Overview](screenshots/check-overview.png)
+![HAML Lint File Annotation](screenshots/file-annotation.png)
 
 ## :bookmark: Changelog
 
@@ -90,7 +92,7 @@ TODO
 - [andrewmcodes/rubocop-linter-action](https://github.com/andrewmcodes/rubocop-linter-action).
 - [andrewmcodes/standardrb-action](https://github.com/andrewmcodes/standardrb-action).
 
-## Contributors ✨
+## ✨ Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
