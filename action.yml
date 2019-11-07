@@ -1,0 +1,12 @@
+
+name: 'HAML Lint Action'
+description: 'A GitHub Action that lints your HAML code with HAML Lint!'
+author: 'Andrew Mason <andrewmcodes@protonmail.com>'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+env:
+  GITHUB_TOKEN: secrets.GITHUB_TOKEN
+branding:
+  icon: 'code'
+  color: 'yellow'

@@ -1,0 +1,219 @@
+{
+  "metadata": {
+    "haml_lint_version": "0.34.0",
+    "ruby_engine": "ruby",
+    "ruby_patchlevel": "104",
+    "ruby_platform": "x86_64-darwin18"
+  },
+  "files": [
+    {
+      "path": "app/views/articles/_form.html.haml",
+      "offenses": [
+        {
+          "severity": "warning",
+          "message": "`= \"...\"` should be rewritten as `...`",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "UnnecessaryStringOutput"
+        },
+        {
+          "severity": "warning",
+          "message": "Line is too long. [99/80]",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "LineLength"
+        },
+        {
+          "severity": "warning",
+          "message": "`id` attribute must be in lisp-case",
+          "location": {
+            "line": 3
+          },
+          "linter_name": "IdNames"
+        },
+        {
+          "severity": "warning",
+          "message": "Style/StringLiteralsInInterpolation: Prefer single-quoted strings inside interpolations.",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "RuboCop"
+        },
+        {
+          "severity": "warning",
+          "message": "Avoid using instance variables in partials views",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "InstanceVariables"
+        }
+      ]
+    },
+    {
+      "path": "app/views/articles/index.html.haml",
+      "offenses": [
+        {
+          "severity": "warning",
+          "message": "Line is too long. [92/80]",
+          "location": {
+            "line": 19
+          },
+          "linter_name": "LineLength"
+        }
+      ]
+    },
+    {
+      "path": "app/views/layouts/application.html.haml",
+      "offenses": [
+        {
+          "severity": "warning",
+          "message": "Hash attribute should start with one space after the opening brace",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "SpaceInsideHashAttributes"
+        },
+        {
+          "severity": "warning",
+          "message": "Hash attribute should end with one space before the closing brace",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "SpaceInsideHashAttributes"
+        },
+        {
+          "severity": "warning",
+          "message": "Line is too long. [82/80]",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "LineLength"
+        },
+        {
+          "severity": "warning",
+          "message": "Line is too long. [88/80]",
+          "location": {
+            "line": 8
+          },
+          "linter_name": "LineLength"
+        },
+        {
+          "severity": "warning",
+          "message": "Layout/SpaceInsideHashLiteralBraces: Space inside { missing.",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "RuboCop"
+        },
+        {
+          "severity": "warning",
+          "message": "Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "RuboCop"
+        },
+        {
+          "severity": "warning",
+          "message": "Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "RuboCop"
+        },
+        {
+          "severity": "warning",
+          "message": "Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "RuboCop"
+        },
+        {
+          "severity": "warning",
+          "message": "Layout/SpaceInsideHashLiteralBraces: Space inside } missing.",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "RuboCop"
+        }
+      ]
+    },
+    {
+      "path": "app/views/layouts/mailer.html.haml",
+      "offenses": [
+        {
+          "severity": "warning",
+          "message": "Hash attribute should start with one space after the opening brace",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "SpaceInsideHashAttributes"
+        },
+        {
+          "severity": "warning",
+          "message": "Hash attribute should end with one space before the closing brace",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "SpaceInsideHashAttributes"
+        },
+        {
+          "severity": "warning",
+          "message": "Line is too long. [82/80]",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "LineLength"
+        },
+        {
+          "severity": "warning",
+          "message": "Layout/SpaceInsideHashLiteralBraces: Space inside { missing.",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "RuboCop"
+        },
+        {
+          "severity": "warning",
+          "message": "Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "RuboCop"
+        },
+        {
+          "severity": "warning",
+          "message": "Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "RuboCop"
+        },
+        {
+          "severity": "warning",
+          "message": "Style/StringLiterals: Prefer single-quoted strings when you don't need string interpolation or special symbols.",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "RuboCop"
+        },
+        {
+          "severity": "warning",
+          "message": "Layout/SpaceInsideHashLiteralBraces: Space inside } missing.",
+          "location": {
+            "line": 4
+          },
+          "linter_name": "RuboCop"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "offense_count": 23,
+    "target_file_count": 4,
+    "inspected_file_count": 8
+  }
+}
