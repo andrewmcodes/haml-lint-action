@@ -56,7 +56,6 @@
 - v1.0.1 version bump [\#31](https://github.com/andrewmcodes/rubocop-linter-action/pull/31) ([andrewmcodes](https://github.com/andrewmcodes))
 - Update dockerfile and add build test action [\#30](https://github.com/andrewmcodes/rubocop-linter-action/pull/30) ([andrewmcodes](https://github.com/andrewmcodes))
 - Do not send in an empty array of annotations on success [\#29](https://github.com/andrewmcodes/rubocop-linter-action/pull/29) ([andrewmcodes](https://github.com/andrewmcodes))
-- docs: add MiguelSavignano as a contributor [\#23](https://github.com/andrewmcodes/rubocop-linter-action/pull/23) ([allcontributors[bot]](https://github.com/apps/allcontributors))
 
 ## [v1.0.0](https://github.com/andrewmcodes/rubocop-linter-action/tree/v1.0.0) (2019-10-29)
 
@@ -81,6 +80,7 @@
 - Release v1.0.0 [\#26](https://github.com/andrewmcodes/rubocop-linter-action/pull/26) ([andrewmcodes](https://github.com/andrewmcodes))
 - docs: add mcgregordan as a contributor [\#25](https://github.com/andrewmcodes/rubocop-linter-action/pull/25) ([allcontributors[bot]](https://github.com/apps/allcontributors))
 - docs: add andrewmcodes as a contributor [\#24](https://github.com/andrewmcodes/rubocop-linter-action/pull/24) ([allcontributors[bot]](https://github.com/apps/allcontributors))
+- docs: add MiguelSavignano as a contributor [\#23](https://github.com/andrewmcodes/rubocop-linter-action/pull/23) ([allcontributors[bot]](https://github.com/apps/allcontributors))
 - update docs [\#22](https://github.com/andrewmcodes/rubocop-linter-action/pull/22) ([andrewmcodes](https://github.com/andrewmcodes))
 - add rspec and rubocop binstubs, and lint the project [\#21](https://github.com/andrewmcodes/rubocop-linter-action/pull/21) ([andrewmcodes](https://github.com/andrewmcodes))
 - Refactor/files structure [\#20](https://github.com/andrewmcodes/rubocop-linter-action/pull/20) ([MiguelSavignano](https://github.com/MiguelSavignano))
