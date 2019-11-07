@@ -10,7 +10,7 @@
 
 # :white_check_mark: HAML Lint Action
 
-A GitHub Action to run HAML-Lint against your code and create annotations in the GitHub UI.
+A GitHub Action to run [HAML-Lint](https://github.com/sds/haml-lint) against your code and create annotations in the GitHub UI.
 
 - [:white_check_mark: HAML Lint Action](#whitecheckmark-haml-lint-action)
   - [:page_facing_up: Introduction](#pagefacingup-introduction)
@@ -68,7 +68,11 @@ Due to the GitHub Check Runs API, we can only return 50 annotations per run. See
 
 ## :camera_flash: Screenshots
 
+<div style="margin-bottom:1rem;">
+
 ![HAML Lint Checks Overview](screenshots/check-overview.png)
+</div>
+
 ![HAML Lint File Annotation](screenshots/file-annotation.png)
 
 ## :bookmark: Changelog

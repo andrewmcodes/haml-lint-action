@@ -9,4 +9,4 @@ env:
   GITHUB_TOKEN: secrets.GITHUB_TOKEN
 branding:
   icon: 'code'
-  color: 'yellow'
+  color: 'orange'
