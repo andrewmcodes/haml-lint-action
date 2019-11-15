@@ -16,6 +16,7 @@ A GitHub Action to run [HAML-Lint](https://github.com/sds/haml-lint) against you
   - [:page_facing_up: Introduction](#pagefacingup-introduction)
   - [:bulb: Usage](#bulb-usage)
     - [:package: Example Workflow](#package-example-workflow)
+    - [:moneybag: Available Inputs](#moneybag-available-inputs)
   - [:warning: Gotchas](#warning-gotchas)
   - [:camera_flash: Screenshots](#cameraflash-screenshots)
   - [:bookmark: Changelog](#bookmark-changelog)
@@ -38,6 +39,9 @@ Add the following to your GitHub action workflow to use HAML Lint Action:
 ```yaml
 - name: HAML Lint
   uses: andrewmcodes/haml-lint-action@v0.0.1
+  with:
+    file_paths: 'app/**/*.html.haml'
+    fail_level: 'error'
   env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
@@ -58,9 +62,23 @@ jobs:
     - uses: actions/checkout@v1
     - name: HAML Lint
       uses: andrewmcodes/haml-lint-action@v0.0.1
+      with:
+        file_paths: 'app/**/*.html.haml'
+        fail_level: 'error'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
+
+### :moneybag: Available Inputs
+
+| Input Parm Name | Required | Default Value        | Description                                                                                         |
+| ---             | ---      | ---                  | ---                                                                                                 |
+| file_paths      | false    | 'app/**/*.html.haml' | Define the paths you wish to be linted per run. multiple paths can be on one line just add a space. |
+| version         | false    | latest GA            | Define a later version of haml_lint if latest is not needed                                         |
+| additional_gems | false    |                      | Additional Gems can be installed via one line with spaces and commands are supported like a version |
+| config_path     | false    | repo ./              | If the config path is another spot in the repo or not named .haml-lint.yml                          |
+| exclude_paths   | false    |                      | Define a list of paths to exclude from being linted.                                                |
+| fail_level      | false    | 'error'              | Can define 'error' or 'warning' to cause haml-lint to error out on                                  |
 
 ## :warning: Gotchas
 
