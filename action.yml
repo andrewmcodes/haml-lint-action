@@ -3,17 +3,40 @@ name: 'HAML Lint Action'
 description: 'A GitHub Action that lints your HAML code with HAML Lint!'
 author: 'Andrew Mason <andrewmcodes@protonmail.com>'
 inputs:
+  version:
+    description: 'Define spcific Haml Lint gem version to use'
+    required: false
+    default: ''
   additional_gems:
     description: 'Add Additional Gems to install during setup'
     required: false
     default: ''
+  file_paths:
+    description: 'File paths for Haml Lint to analyze typically app/views/**/*'
+    required: false
+    default: 'app/**/*.html.haml'
+  config_path:
+    description: 'Path to Haml config file not in the base repo path ./'
+    required: false
+  exclude_paths:
+    description: 'Haml lint command Exclude one or more files from being linted'
+    required: false
+  fail_level:
+    description: 'Specify the minimum severity (warning or error) for which the lint should fail'
+    required: false
+    default: 'error'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - ${{ inputs.version }}
     - ${{ inputs.additional_gems }}
 env:
   GITHUB_TOKEN: secrets.GITHUB_TOKEN
+  FILE_PATHS: ${{ inputs.file_paths }}
+  CONFIG_PATH: ${{ inputs.config_path }}
+  EXCLUDE_FILES: ${{ inputs.exclude_paths }}
+  FAIL_LEVEL: ${{ inputs.fail_level }}
 branding:
   icon: 'code'
   color: 'orange'
