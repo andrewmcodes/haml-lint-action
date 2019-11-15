@@ -33,10 +33,10 @@ runs:
     - ${{ inputs.additional_gems }}
 env:
   GITHUB_TOKEN: secrets.GITHUB_TOKEN
-  FILE_PATHS: ${{ inputs.file_paths }}
-  CONFIG_PATH: ${{ inputs.config_path }}
-  EXCLUDE_FILES: ${{ inputs.exclude_paths }}
-  FAIL_LEVEL: ${{ inputs.fail_level }}
+  FILE_PATHS: inputs.file_paths
+  CONFIG_PATH: inputs.config_path
+  EXCLUDE_FILES: inputs.exclude_paths
+  FAIL_LEVEL: inputs.fail_level
 branding:
   icon: 'code'
   color: 'orange'
