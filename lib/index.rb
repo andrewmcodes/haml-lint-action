@@ -30,7 +30,7 @@ end
     read_json(ENV["REPORT_PATH"])
   else
     Dir.chdir(ENV["GITHUB_WORKSPACE"]) {
-      JSON.parse(System(@haml))
+      JSON.parse(system(@haml))
     }
   end
 
