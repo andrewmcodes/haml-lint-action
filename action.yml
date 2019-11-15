@@ -2,9 +2,16 @@
 name: 'HAML Lint Action'
 description: 'A GitHub Action that lints your HAML code with HAML Lint!'
 author: 'Andrew Mason <andrewmcodes@protonmail.com>'
+inputs:
+  additional_gems:
+    description: 'Add Additional Gems to install during setup'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.additional_gems }}
 env:
   GITHUB_TOKEN: secrets.GITHUB_TOKEN
 branding:
