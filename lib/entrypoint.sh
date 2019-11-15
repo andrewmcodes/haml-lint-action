@@ -2,7 +2,10 @@
 
 set -e
 
-if ["${INPUT_VERSION}" != ""]
+if ["${INPUT_BUNDLE}" == "true"]
+then
+  bundle install --jobs 4 --retry 3
+elif ["${INPUT_VERSION}" != ""]
 then
   gem install haml-lint ${INPUT_ADDITIONAL_GEMS}
 else

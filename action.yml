@@ -25,6 +25,10 @@ inputs:
     description: 'Specify the minimum severity (warning or error) for which the lint should fail'
     required: false
     default: 'error'
+  bundle:
+    description: 'Useful gemfile, useful for using your oen version of the gem'
+    required: false
+    default: false
 runs:
   using: 'docker'
   image: 'Dockerfile'

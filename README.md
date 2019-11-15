@@ -73,6 +73,7 @@ jobs:
 
 | Input Parm Name | Required | Default Value        | Description                                                                                         |
 | ---             | ---      | ---                  | ---                                                                                                 |
+| bundle          | false    | false                | If you want to use a version of a gem you maintain this is your best bet, longer time for load could be seen |
 | file_paths      | false    | 'app/**/*.html.haml' | Define the paths you wish to be linted per run. multiple paths can be on one line just add a space. |
 | version         | false    | latest GA            | Define a later version of haml_lint if latest is not needed                                         |
 | additional_gems | false    |                      | Additional Gems can be installed via one line with spaces and commands are supported like a version |
