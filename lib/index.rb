@@ -19,17 +19,11 @@ end
   repo: ENV["GITHUB_REPOSITORY_NAME"] || @event_json.dig("repository", "name"),
 }
 
-@params = {
-  file_paths: ENV["FILE_PATHS"],
-  config_path: ENV["CONFIG_PATH"],
-  exclude_files: ENV["EXCLUDE_FILES"],
-  fail_level: ENV["FAIL_LEVEL"]
-}
-
-@haml = "haml-lint -r json"
-@haml += " -c " + @params.config_path if ENV["CONFIG_PATH"]
-@haml += " -e " + @params.exclude_files if ENV["EXCLUDE_FILES"]
-@haml += " --fail-level " + @params.fail_level
+@haml = "haml-lint " + ENV["FILE_PATHS"]
+@haml += "-r json"
+@haml += " -c " + ENV["CONFIG_PATH"] if ENV["CONFIG_PATH"]
+@haml += " -e " + ENV["EXCLUDE_FILES"] if ENV["EXCLUDE_FILES"]
+@haml += " --fail-level " + ENV["FAIL_LEVEL"]
 
 @report =
   if ENV["REPORT_PATH"]
