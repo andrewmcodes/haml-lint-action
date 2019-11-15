@@ -35,6 +35,7 @@ runs:
   args:
     - ${{ inputs.version }}
     - ${{ inputs.additional_gems }}
+    - ${{ inputs.bundle }}
 env:
   GITHUB_TOKEN: secrets.GITHUB_TOKEN
 branding:
