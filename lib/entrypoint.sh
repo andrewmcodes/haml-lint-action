@@ -2,6 +2,7 @@
 
 set -e
 
-gem install haml-lint "${INPUT_ADDITIONAL_GEMS}"
+echo "$1"
+gem install haml-lint "$1"
 
 ruby /action/lib/index.rb
