@@ -21,8 +21,8 @@ end
 
 @haml = "haml-lint " + ENV["INPUT_FILE_PATHS"]
 @haml += " -r json"
-@haml += " -c " + ENV["INPUT_CONFIG_PATH"] if ENV["INPUT_CONFIG_PATH"]
-@haml += " -e " + ENV["INPUT_EXCLUDE_PATHS"] if ENV["INPUT_EXCLUDE_PATHS"]
+@haml += " -c " + ENV["INPUT_CONFIG_PATH"] if ENV["INPUT_CONFIG_PATH"] != ""
+@haml += " -e " + ENV["INPUT_EXCLUDE_PATHS"] if ENV["INPUT_EXCLUDE_PATHS"] != ""
 @haml += " --fail-level " + ENV["INPUT_FAIL_LEVEL"]
 
 @report =
