@@ -4,7 +4,7 @@
   ![Tests](https://github.com/andrewmcodes/haml-lint-action/workflows/Test/badge.svg)
   ![Build](https://github.com/andrewmcodes/haml-lint-action/workflows/Build/badge.svg)
   [![Changelog](https://github.com/andrewmcodes/haml-lint-action/workflows/Changelog/badge.svg)](/CHANGELOG.md)
-  ![Version Number](https://img.shields.io/static/v1?label=Version&message=v0.0.1&color=blue)
+  ![Version Number](https://img.shields.io/static/v1?label=Version&message=v0.0.2&color=blue)
   [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 </div>
 
@@ -38,7 +38,7 @@ Add the following to your GitHub action workflow to use HAML Lint Action:
 
 ```yaml
 - name: HAML Lint
-  uses: andrewmcodes/haml-lint-action@v0.0.1
+  uses: andrewmcodes/haml-lint-action@v0.0.2
   with:
     file_paths: 'app/**/*.html.haml'
     fail_level: 'error'
@@ -61,7 +61,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: HAML Lint
-      uses: andrewmcodes/haml-lint-action@v0.0.1
+      uses: andrewmcodes/haml-lint-action@v0.0.2
       with:
         file_paths: 'app/**/*.html.haml'
         fail_level: 'error'
