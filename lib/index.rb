@@ -18,11 +18,18 @@ end
   owner: ENV["GITHUB_REPOSITORY_OWNER"] || @event_json.dig("repository", "owner", "login"),
   repo: ENV["GITHUB_REPOSITORY_NAME"] || @event_json.dig("repository", "name"),
 }
+
+@haml = "haml-lint " + ENV["INPUT_FILE_PATHS"]
+@haml += " -r json"
+@haml += " -c " + ENV["INPUT_CONFIG_PATH"] if ENV["INPUT_CONFIG_PATH"] != ""
+@haml += " -e " + ENV["INPUT_EXCLUDE_PATHS"] if ENV["INPUT_EXCLUDE_PATHS"] != ""
+@haml += " --fail-level " + ENV["INPUT_FAIL_LEVEL"]
+
 @report =
   if ENV["REPORT_PATH"]
     read_json(ENV["REPORT_PATH"])
   else
-    Dir.chdir(ENV["GITHUB_WORKSPACE"]) { JSON.parse(`haml-lint -r json`) }
+    Dir.chdir(ENV["GITHUB_WORKSPACE"]) { JSON.parse(`#{@haml}`) }
   end
 
 GithubCheckRunService.new(@report, @github_data, ReportAdapter).run
