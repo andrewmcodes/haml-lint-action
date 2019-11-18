@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/andrewmcodes/haml-lint-action/tree/HEAD)
+
+[Full Changelog](https://github.com/andrewmcodes/haml-lint-action/compare/v0.0.1...HEAD)
+
+**Fixed bugs:**
+
+- Add additional Rubocop gems [\#4](https://github.com/andrewmcodes/haml-lint-action/issues/4)
+
+**Merged pull requests:**
+
+- Add Input Params to Action [\#5](https://github.com/andrewmcodes/haml-lint-action/pull/5) ([chiefpansancolt](https://github.com/chiefpansancolt))
+
 ## [v0.0.1](https://github.com/andrewmcodes/haml-lint-action/tree/v0.0.1) (2019-11-07)
 
 [Full Changelog](https://github.com/andrewmcodes/haml-lint-action/compare/156bd19da60971d5577433badde48f0daa2cdbdf...v0.0.1)
