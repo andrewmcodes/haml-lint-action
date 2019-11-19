@@ -1,6 +1,6 @@
 <div align="center">
 
-  ![StandardRB](https://github.com/andrewmcodes/haml-lint-action/workflows/StandardRB/badge.svg)
+  ![Linters](https://github.com/andrewmcodes/haml-lint-action/workflows/Linters/badge.svg)
   ![Tests](https://github.com/andrewmcodes/haml-lint-action/workflows/Test/badge.svg)
   ![Build](https://github.com/andrewmcodes/haml-lint-action/workflows/Build/badge.svg)
   [![Changelog](https://github.com/andrewmcodes/haml-lint-action/workflows/Changelog/badge.svg)](/CHANGELOG.md)
