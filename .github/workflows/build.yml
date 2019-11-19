@@ -11,5 +11,7 @@ jobs:
     - name: Verify action syntax
       # The action should not publish any real changes, but should succeed.
       uses: './'
+      with:
+        file_paths: './'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

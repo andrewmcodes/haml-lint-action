@@ -10,7 +10,7 @@ inputs:
     description: 'Add Additional Gems to install during setup'
     required: false
   file_paths:
-    description: 'File paths for Haml Lint to analyze typically app/views/**/*'
+    description: 'File paths for Haml Lint to analyze; typically app/views/**/*'
     required: false
   config_path:
     description: 'Path to Haml config file not in the base repo path ./'
