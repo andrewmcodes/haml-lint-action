@@ -19,7 +19,9 @@ end
   repo: ENV["GITHUB_REPOSITORY_NAME"] || @event_json.dig("repository", "name"),
 }
 
-@haml = "haml-lint " + ENV["INPUT_FILE_PATHS"]
+@input_file_paths = ENV["INPUT_FILE_PATHS"].empty? ? "app/views/" : ENV["INPUT_FILE_PATHS"]
+
+@haml = "haml-lint " + @input_file_paths
 @haml += " -r json"
 @haml += " -c " + ENV["INPUT_CONFIG_PATH"] if ENV["INPUT_CONFIG_PATH"] != ""
 @haml += " -e " + ENV["INPUT_EXCLUDE_PATHS"] if ENV["INPUT_EXCLUDE_PATHS"] != ""

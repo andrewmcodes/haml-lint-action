@@ -6,15 +6,12 @@ inputs:
   version:
     description: 'Define spcific Haml Lint gem version to use'
     required: false
-    default: ''
   additional_gems:
     description: 'Add Additional Gems to install during setup'
     required: false
-    default: ''
   file_paths:
     description: 'File paths for Haml Lint to analyze typically app/views/**/*'
     required: false
-    default: 'app/**/*.html.haml'
   config_path:
     description: 'Path to Haml config file not in the base repo path ./'
     required: false
@@ -35,6 +32,10 @@ runs:
   args:
     - ${{ inputs.version }}
     - ${{ inputs.additional_gems }}
+    - ${{ inputs.file_paths }}
+    - ${{ inputs.config_path }}
+    - ${{ inputs.exclude_paths }}
+    - ${{ inputs.fail_level }}
     - ${{ inputs.bundle }}
 env:
   GITHUB_TOKEN: secrets.GITHUB_TOKEN
