@@ -32,10 +32,6 @@ runs:
   args:
     - ${{ inputs.version }}
     - ${{ inputs.additional_gems }}
-    - ${{ inputs.file_paths }}
-    - ${{ inputs.config_path }}
-    - ${{ inputs.exclude_paths }}
-    - ${{ inputs.fail_level }}
     - ${{ inputs.bundle }}
 env:
   GITHUB_TOKEN: secrets.GITHUB_TOKEN
