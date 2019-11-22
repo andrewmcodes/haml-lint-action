@@ -46,6 +46,17 @@ Add the following to your GitHub action workflow to use HAML Lint Action:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+It is **highly** recommend you tie yourself to a version and do not do the following.
+I promise your life will be much easier. 😇
+
+```yml
+# ❌ Danger, sometimes I break things!
+uses: andrewmcodes/haml-lint-action@master
+
+# ✅ Much better.
+uses: andrewmcodes/haml-lint-action@v0.0.2
+```
+
 ### :package: Example Workflow
 
 Here is an example workflow file incorporating HAML Lint Action:
