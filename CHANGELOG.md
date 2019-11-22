@@ -10,6 +10,7 @@
 
 **Merged pull requests:**
 
+- docs: add chiefpansancolt as a contributor [\#9](https://github.com/andrewmcodes/haml-lint-action/pull/9) ([allcontributors[bot]](https://github.com/apps/allcontributors))
 - integrate dispatch to update the playground repo [\#8](https://github.com/andrewmcodes/haml-lint-action/pull/8) ([andrewmcodes](https://github.com/andrewmcodes))
 - fix build error, update documentation, and add shell lint action [\#7](https://github.com/andrewmcodes/haml-lint-action/pull/7) ([andrewmcodes](https://github.com/andrewmcodes))
 - v0.0.2 version release [\#6](https://github.com/andrewmcodes/haml-lint-action/pull/6) ([andrewmcodes](https://github.com/andrewmcodes))
