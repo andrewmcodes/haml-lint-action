@@ -69,23 +69,27 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+**Go [here](https://github.com/andrewmcodes/haml-lint-action-playground/blob/master/.github/workflows/test.yml) to see more examples!**
+
 ### :moneybag: Available Inputs
 
 Refer to the [official `haml-lint` documentation](https://github.com/sds/haml-lint#usage) for more information on the `haml-lint` options.
 
-| ****Input Parm Name**** | ****Required**** | ****Default Value**** | ****`haml-lint` option**** |                                                                                  ****Description****                                                                                  |              **Example**              |
-| :---------------------: | :--------------: | :-------------------: | :------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------: |
-|         bundle          |      false       |         false         |             no             |                If you want to use a version of a gem you maintain this is your best bet. **NOTE:** action run time will increase relative to the size of your Gemfile.                |                `true`                 |
-|       file_paths        |      false       |     `app/views/`      |            yes             |                                         Define the paths you wish to be linted per run. Multiple paths can be on one line by adding a space.                                          |        `'app/**/*.html.haml'`         |
-|         version         |      false       |   _latest release_    |             no             |                                                                   Define a specific version of the `haml-lint` gem.                                                                   |              `'0.33.0'`               |
-|     additional_gems     |      false       |                       |             no             |                                         Additional Gems can be installed via one line with spaces and commands are supported like a version.                                          | `'rubocop-rails rubocop-performance'` |
-|       config_path       |      false       |                       |            yes             | By default, `haml-lint` will load any file with the name `.haml-lint.yml` as a configuration file. If you want to load a config file with a different name or path, specify the path. |       `'config/haml-lint.yml'`        |
-|      exclude_paths      |      false       |                       |            yes             |                                                                 Define a list of paths to exclude from being linted.                                                                  |    `'app/views/home/*.html.haml'`     |
-|       fail_level        |      false       |        `error`        |            yes             |                                                          Can define `error` or `warning` to cause haml-lint to error out on.                                                          |              `'warning'`              |
+| **Input Parm Name** | **Required** | **Default Value** | **`haml-lint` option** |                                                                                    **Description**                                                                                    |              **Example**              |
+| :-----------------: | :----------: | :---------------: | :--------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------: |
+|       bundle        |    false     |       false       |           no           |                If you want to use a version of a gem you maintain this is your best bet. **NOTE:** action run time will increase relative to the size of your Gemfile.                |                `true`                 |
+|     file_paths      |    false     |   `app/views/`    |          yes           |                                         Define the paths you wish to be linted per run. Multiple paths can be on one line by adding a space.                                          |        `'app/**/*.html.haml'`         |
+|       version       |    false     | _latest release_  |           no           |                                                                   Define a specific version of the `haml-lint` gem.                                                                   |              `'0.33.0'`               |
+|   additional_gems   |    false     |                   |           no           |                                         Additional Gems can be installed via one line with spaces and commands are supported like a version.                                          | `'rubocop-rails rubocop-performance'` |
+|     config_path     |    false     |                   |          yes           | By default, `haml-lint` will load any file with the name `.haml-lint.yml` as a configuration file. If you want to load a config file with a different name or path, specify the path. |       `'config/haml-lint.yml'`        |
+|    exclude_paths    |    false     |                   |          yes           |                                                                 Define a list of paths to exclude from being linted.                                                                  |    `'app/views/home/*.html.haml'`     |
+|     fail_level      |    false     |      `error`      |          yes           |                                                          Can define `error` or `warning` to cause haml-lint to error out on.                                                          |              `'warning'`              |
 
 ## :warning: Gotchas
 
-Due to the GitHub Check Runs API, we can only return 50 annotations per run. See [here](https://developer.github.com/v3/checks/runs/#output-object) for more info.
+1. Due to the GitHub Check Runs API, we can only return 50 annotations per run. See [here](https://developer.github.com/v3/checks/runs/#output-object) for more info.
+2. There is a bug with the Checks API that might cause your runs to get jumbled in the UI, but they will all still run and render annotations in the diff correctly.
+3. You can't use --version with multiple gems. You can specify multiple gems with version requirements using `gem install 'my_gem:1.0.0' 'my_other_gem:~>2.0.0'`
 
 ## :camera_flash: Screenshots
 
