@@ -69,6 +69,8 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+**Go [here](https://github.com/andrewmcodes/haml-lint-action-playground/blob/master/.github/workflows/test.yml) to see more examples!**
+
 ### :moneybag: Available Inputs
 
 Refer to the [official `haml-lint` documentation](https://github.com/sds/haml-lint#usage) for more information on the `haml-lint` options.
