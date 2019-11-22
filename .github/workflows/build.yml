@@ -1,6 +1,12 @@
 name: Build
 
-on: [push]
+on:
+  pull_request:
+    branches:
+      - '*'
+  push:
+    branches:
+      - '*'
 
 jobs:
   build:
@@ -9,7 +15,8 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Verify action syntax
-      # The action should not publish any real changes, but should succeed.
       uses: './'
+      with:
+        file_paths: './'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

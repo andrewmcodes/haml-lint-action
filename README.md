@@ -1,6 +1,6 @@
 <div align="center">
 
-  ![StandardRB](https://github.com/andrewmcodes/haml-lint-action/workflows/StandardRB/badge.svg)
+  ![Linters](https://github.com/andrewmcodes/haml-lint-action/workflows/Linters/badge.svg)
   ![Tests](https://github.com/andrewmcodes/haml-lint-action/workflows/Test/badge.svg)
   ![Build](https://github.com/andrewmcodes/haml-lint-action/workflows/Build/badge.svg)
   [![Changelog](https://github.com/andrewmcodes/haml-lint-action/workflows/Changelog/badge.svg)](/CHANGELOG.md)
@@ -71,15 +71,17 @@ jobs:
 
 ### :moneybag: Available Inputs
 
-| Input Parm Name | Required | Default Value        | Description                                                                                         |
-| ---             | ---      | ---                  | ---                                                                                                 |
-| bundle          | false    | false                | If you want to use a version of a gem you maintain this is your best bet, longer time for load could be seen |
-| file_paths      | false    | 'app/**/*.html.haml' | Define the paths you wish to be linted per run. multiple paths can be on one line just add a space. |
-| version         | false    | latest GA            | Define a later version of haml_lint if latest is not needed                                         |
-| additional_gems | false    |                      | Additional Gems can be installed via one line with spaces and commands are supported like a version |
-| config_path     | false    | repo ./              | If the config path is another spot in the repo or not named .haml-lint.yml                          |
-| exclude_paths   | false    |                      | Define a list of paths to exclude from being linted.                                                |
-| fail_level      | false    | 'error'              | Can define 'error' or 'warning' to cause haml-lint to error out on                                  |
+Refer to the [official `haml-lint` documentation](https://github.com/sds/haml-lint#usage) for more information on the `haml-lint` options.
+
+| ****Input Parm Name**** | ****Required**** | ****Default Value**** | ****`haml-lint` option**** |                                                                                  ****Description****                                                                                  |              **Example**              |
+| :---------------------: | :--------------: | :-------------------: | :------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------: |
+|         bundle          |      false       |         false         |             no             |                If you want to use a version of a gem you maintain this is your best bet. **NOTE:** action run time will increase relative to the size of your Gemfile.                |                `true`                 |
+|       file_paths        |      false       |     `app/views/`      |            yes             |                                         Define the paths you wish to be linted per run. Multiple paths can be on one line by adding a space.                                          |        `'app/**/*.html.haml'`         |
+|         version         |      false       |   _latest release_    |             no             |                                                                   Define a specific version of the `haml-lint` gem.                                                                   |              `'0.33.0'`               |
+|     additional_gems     |      false       |                       |             no             |                                         Additional Gems can be installed via one line with spaces and commands are supported like a version.                                          | `'rubocop-rails rubocop-performance'` |
+|       config_path       |      false       |                       |            yes             | By default, `haml-lint` will load any file with the name `.haml-lint.yml` as a configuration file. If you want to load a config file with a different name or path, specify the path. |       `'config/haml-lint.yml'`        |
+|      exclude_paths      |      false       |                       |            yes             |                                                                 Define a list of paths to exclude from being linted.                                                                  |    `'app/views/home/*.html.haml'`     |
+|       fail_level        |      false       |        `error`        |            yes             |                                                          Can define `error` or `warning` to cause haml-lint to error out on.                                                          |              `'warning'`              |
 
 ## :warning: Gotchas
 
