@@ -10,6 +10,7 @@
 
 **Merged pull requests:**
 
+- integrate dispatch to update the playground repo [\#8](https://github.com/andrewmcodes/haml-lint-action/pull/8) ([andrewmcodes](https://github.com/andrewmcodes))
 - fix build error, update documentation, and add shell lint action [\#7](https://github.com/andrewmcodes/haml-lint-action/pull/7) ([andrewmcodes](https://github.com/andrewmcodes))
 - Add Input Params to Action [\#5](https://github.com/andrewmcodes/haml-lint-action/pull/5) ([chiefpansancolt](https://github.com/chiefpansancolt))
 
