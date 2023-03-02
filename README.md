@@ -1,30 +1,8 @@
-<div align="center">
-
-  ![Linters](https://github.com/andrewmcodes/haml-lint-action/workflows/Linters/badge.svg)
-  ![Tests](https://github.com/andrewmcodes/haml-lint-action/workflows/Test/badge.svg)
-  ![Build](https://github.com/andrewmcodes/haml-lint-action/workflows/Build/badge.svg)
-  [![Changelog](https://github.com/andrewmcodes/haml-lint-action/workflows/Changelog/badge.svg)](/CHANGELOG.md)
-  ![Version Number](https://img.shields.io/static/v1?label=Version&message=v0.0.2&color=blue)
-  [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
-</div>
+[![Project Status: Inactive – The project has reached a stable, usable state but is no longer being actively developed; support/maintenance will be provided as time allows.](https://www.repostatus.org/badges/latest/inactive.svg)](https://www.repostatus.org/#inactive)
 
 # :white_check_mark: HAML Lint Action
 
 A GitHub Action to run [HAML-Lint](https://github.com/sds/haml-lint) against your code and create annotations in the GitHub UI.
-
-- [:white_check_mark: HAML Lint Action](#whitecheckmark-haml-lint-action)
-  - [:page_facing_up: Introduction](#pagefacingup-introduction)
-  - [:bulb: Usage](#bulb-usage)
-    - [:package: Example Workflow](#package-example-workflow)
-    - [:moneybag: Available Inputs](#moneybag-available-inputs)
-  - [:warning: Gotchas](#warning-gotchas)
-  - [:camera_flash: Screenshots](#cameraflash-screenshots)
-  - [:bookmark: Changelog](#bookmark-changelog)
-  - [:sos: Contributing](#sos-contributing)
-  - [:rotating_light: Code of Conduct](#rotatinglight-code-of-conduct)
-  - [:copyright: License](#copyright-license)
-  - [:robot: Check Out My Other Ruby GitHub Actions](#robot-check-out-my-other-ruby-github-actions)
-  - [✨ Contributors](#%e2%9c%a8-contributors)
 
 ## :page_facing_up: Introduction
 
