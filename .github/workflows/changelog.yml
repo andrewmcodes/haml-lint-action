@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,16 +16,18 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.3'
-        bundler-cache: true
-    - name: Create local changes
+    - name: Generate changelog
       run: |
+        gem install github_changelog_generator
         github_changelog_generator -u andrewmcodes -p haml-lint-action --token ${{ secrets.GITHUB_TOKEN }}
-    - name: Commit files
+    - name: Commit and push if changed
       run: |
         git config --local user.email "andrewmcodes@protonmail.com"
         git config --local user.name "Andrew Mason"
-        git commit -m "Update changelog" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@v1.1.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        git add CHANGELOG.md
+        if git diff --cached --quiet; then
+          echo "No changelog changes"
+        else
+          git commit -m "docs: update changelog [ci skip]"
+          git push
+        fi
