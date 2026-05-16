@@ -13,21 +13,18 @@ jobs:
     name: StandardRB Action
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-    - name: Set up Ruby 2.6
-      uses: actions/setup-ruby@v1
+    - uses: actions/checkout@v4
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.6.x
-    - name: Bundle
-      run: |
-        gem install bundler
-        bundle install --jobs 4 --retry 3
+        ruby-version: '3.3'
+        bundler-cache: true
     - name: Run standardrb
       run: bin/standardrb
   shell_linter:
     name: Shell Lint Action
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
       - name: Run Shell Linter
         uses: azohra/shell-linter@v0.1.0
