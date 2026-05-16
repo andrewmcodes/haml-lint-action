@@ -8,7 +8,7 @@ class ReportAdapter
       "convention" => "failure",
       "warning" => "warning",
       "error" => "failure",
-      "fatal" => "failure",
+      "fatal" => "failure"
     }.freeze
 
     def conclusion(report)
@@ -32,11 +32,11 @@ class ReportAdapter
           location = offense["location"]
           annotation_list.push(
             {
-              'path': file["path"],
-              'start_line': location["line"],
-              'end_line': location["line"],
-              'annotation_level': annotation_level(offense["severity"]),
-              'message': "#{offense["linter_name"]}: #{offense["message"]}",
+              path: file["path"],
+              start_line: location["line"],
+              end_line: location["line"],
+              annotation_level: annotation_level(offense["severity"]),
+              message: "#{offense["linter_name"]}: #{offense["message"]}"
             }.compact.transform_keys!(&:to_s)
           )
         end

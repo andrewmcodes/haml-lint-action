@@ -3,9 +3,9 @@
 require "net/http"
 require "json"
 require "time"
-require_relative "./report_adapter"
-require_relative "./github_check_run_service"
-require_relative "./github_client"
+require_relative "report_adapter"
+require_relative "github_check_run_service"
+require_relative "github_client"
 
 def read_json(path)
   JSON.parse(File.read(path))
@@ -16,7 +16,7 @@ end
   sha: ENV["GITHUB_SHA"],
   token: ENV["GITHUB_TOKEN"],
   owner: ENV["GITHUB_REPOSITORY_OWNER"] || @event_json.dig("repository", "owner", "login"),
-  repo: ENV["GITHUB_REPOSITORY_NAME"] || @event_json.dig("repository", "name"),
+  repo: ENV["GITHUB_REPOSITORY_NAME"] || @event_json.dig("repository", "name")
 }
 
 @input_file_paths = ENV["INPUT_FILE_PATHS"].empty? ? "app/views/" : ENV["INPUT_FILE_PATHS"]
