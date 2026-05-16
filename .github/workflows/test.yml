@@ -13,7 +13,7 @@ jobs:
     name: Rspec Test Action
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -25,9 +25,9 @@ jobs:
     name: Update playground
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Repository Dispatch
-      uses: peter-evans/repository-dispatch@v1
+      uses: peter-evans/repository-dispatch@v4
       with:
         token: ${{ secrets.DISPATCH_ACCESS_TOKEN }}
         repository: andrewmcodes/haml-lint-action-playground

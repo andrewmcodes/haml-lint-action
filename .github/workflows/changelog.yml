@@ -8,7 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v6
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -23,6 +23,6 @@ jobs:
         git config --local user.name "Andrew Mason"
         git commit -m "Update changelog" -a
     - name: Push changes
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@v1.1.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
